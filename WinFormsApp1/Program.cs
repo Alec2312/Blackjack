@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace WinFormsApp1
+namespace Blackjack
 {
     internal static class Program
     {
