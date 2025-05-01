@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Blackjack
 {
-    class Player
+    public class Player
     {
         public string Name { get; set; }
         public int Points { get; set; }
@@ -16,12 +16,8 @@ namespace Blackjack
         public Player(string name)
         {
             Name = name;
-            Points = 0;
             Hand = new List<Card>();
-            IsBusted = false;
-            IsStanding = false;
-            IsDoublingDown = false;
-            IsSplitting = false;
+            ResetStatus();
         }
 
         public void AddCard(Card card)
@@ -32,16 +28,23 @@ namespace Blackjack
 
         public void CalculatePoints()
         {
-            Points = 0;
-            foreach (var card in Hand)
-            {
-                Points += (int)card.faceValue;
-            }
+            Points = Hand.Sum(card => (int)card.faceValue);
+        }
+
+        public string GetPlayerDetails()
+        {
+            string handDetails = string.Join(", ", Hand.Select(c => c.ToString()));
+            return $"{Name} - Points: {Points}, Cards: {handDetails}";
         }
 
         public void ResetHand()
         {
             Hand.Clear();
+            ResetStatus();
+        }
+
+        private void ResetStatus()
+        {
             Points = 0;
             IsBusted = false;
             IsStanding = false;

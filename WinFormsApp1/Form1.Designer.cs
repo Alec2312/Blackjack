@@ -43,6 +43,11 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            playerButton4 = new Button();
+            playerButton1 = new Button();
+            playerButton2 = new Button();
+            playerButton3 = new Button();
+            listBoxPlayerDetails = new ListBox();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -58,7 +63,7 @@
             button1.Name = "button1";
             button1.Size = new Size(156, 45);
             button1.TabIndex = 0;
-            button1.Text = "Get top card";
+            button1.Text = "Pak Bovenste Kaart";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -69,11 +74,11 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(361, 174);
+            label1.Location = new Point(557, 327);
             label1.Name = "label1";
-            label1.Size = new Size(41, 20);
+            label1.Size = new Size(103, 20);
             label1.TabIndex = 1;
-            label1.Text = "Card";
+            label1.Text = "Huidige Kaart";
             label1.Click += label1_Click;
             // 
             // button2
@@ -85,7 +90,7 @@
             button2.Name = "button2";
             button2.Size = new Size(156, 49);
             button2.TabIndex = 2;
-            button2.Text = "Shuffle deck";
+            button2.Text = "Hussel Dek";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -111,7 +116,7 @@
             buttonSelectPlayers.Name = "buttonSelectPlayers";
             buttonSelectPlayers.Size = new Size(156, 50);
             buttonSelectPlayers.TabIndex = 7;
-            buttonSelectPlayers.Text = "buttonSelectPlayers";
+            buttonSelectPlayers.Text = "Selecteer Spelers";
             buttonSelectPlayers.UseVisualStyleBackColor = true;
             buttonSelectPlayers.Click += buttonSelectPlayers_Click;
             // 
@@ -119,7 +124,7 @@
             // 
             labelPlayer2.Anchor = AnchorStyles.Top;
             labelPlayer2.AutoSize = true;
-            labelPlayer2.Location = new Point(273, 81);
+            labelPlayer2.Location = new Point(273, 101);
             labelPlayer2.Name = "labelPlayer2";
             labelPlayer2.Size = new Size(57, 20);
             labelPlayer2.TabIndex = 10;
@@ -129,7 +134,7 @@
             // 
             labelPlayer3.Anchor = AnchorStyles.Top;
             labelPlayer3.AutoSize = true;
-            labelPlayer3.Location = new Point(474, 81);
+            labelPlayer3.Location = new Point(474, 101);
             labelPlayer3.Name = "labelPlayer3";
             labelPlayer3.Size = new Size(57, 20);
             labelPlayer3.TabIndex = 11;
@@ -139,7 +144,7 @@
             // 
             labelPlayer4.Anchor = AnchorStyles.Top;
             labelPlayer4.AutoSize = true;
-            labelPlayer4.Location = new Point(675, 81);
+            labelPlayer4.Location = new Point(675, 101);
             labelPlayer4.Name = "labelPlayer4";
             labelPlayer4.Size = new Size(57, 20);
             labelPlayer4.TabIndex = 12;
@@ -149,7 +154,7 @@
             // 
             labelPlayer1.Anchor = AnchorStyles.Top;
             labelPlayer1.AutoSize = true;
-            labelPlayer1.Location = new Point(72, 81);
+            labelPlayer1.Location = new Point(72, 101);
             labelPlayer1.Name = "labelPlayer1";
             labelPlayer1.Size = new Size(57, 20);
             labelPlayer1.TabIndex = 13;
@@ -162,12 +167,13 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Location = new Point(3, 33);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(195, 75);
+            pictureBox1.Size = new Size(195, 65);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // pictureBox2
             // 
@@ -175,12 +181,13 @@
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(204, 3);
+            pictureBox2.Location = new Point(204, 33);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(195, 75);
+            pictureBox2.Size = new Size(195, 65);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click_1;
             // 
             // pictureBox3
             // 
@@ -188,12 +195,13 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(405, 3);
+            pictureBox3.Location = new Point(405, 33);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(195, 75);
+            pictureBox3.Size = new Size(195, 65);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 16;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox4
             // 
@@ -201,12 +209,13 @@
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(606, 3);
+            pictureBox4.Location = new Point(606, 33);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(195, 75);
+            pictureBox4.Size = new Size(195, 65);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 17;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -216,21 +225,80 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel1.Controls.Add(labelPlayer4, 3, 1);
-            tableLayoutPanel1.Controls.Add(pictureBox4, 3, 0);
-            tableLayoutPanel1.Controls.Add(labelPlayer3, 2, 1);
-            tableLayoutPanel1.Controls.Add(pictureBox2, 1, 0);
-            tableLayoutPanel1.Controls.Add(labelPlayer2, 1, 1);
-            tableLayoutPanel1.Controls.Add(pictureBox3, 2, 0);
-            tableLayoutPanel1.Controls.Add(labelPlayer1, 0, 1);
+            tableLayoutPanel1.Controls.Add(playerButton4, 3, 3);
+            tableLayoutPanel1.Controls.Add(playerButton1, 0, 3);
+            tableLayoutPanel1.Controls.Add(labelPlayer1, 0, 2);
+            tableLayoutPanel1.Controls.Add(pictureBox1, 0, 1);
+            tableLayoutPanel1.Controls.Add(playerButton2, 1, 3);
+            tableLayoutPanel1.Controls.Add(playerButton3, 2, 3);
+            tableLayoutPanel1.Controls.Add(labelPlayer2, 1, 2);
+            tableLayoutPanel1.Controls.Add(labelPlayer3, 2, 2);
+            tableLayoutPanel1.Controls.Add(labelPlayer4, 3, 2);
+            tableLayoutPanel1.Controls.Add(pictureBox2, 1, 1);
+            tableLayoutPanel1.Controls.Add(pictureBox3, 2, 1);
+            tableLayoutPanel1.Controls.Add(pictureBox4, 3, 1);
             tableLayoutPanel1.Location = new Point(-2, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.Size = new Size(804, 163);
             tableLayoutPanel1.TabIndex = 18;
+            // 
+            // playerButton4
+            // 
+            playerButton4.Anchor = AnchorStyles.None;
+            playerButton4.Location = new Point(606, 124);
+            playerButton4.Name = "playerButton4";
+            playerButton4.Size = new Size(195, 42);
+            playerButton4.TabIndex = 23;
+            playerButton4.Text = "Geef Huidige Kaart";
+            playerButton4.UseVisualStyleBackColor = true;
+            playerButton4.Click += playerButton4_Click_1;
+            // 
+            // playerButton1
+            // 
+            playerButton1.Anchor = AnchorStyles.None;
+            playerButton1.Location = new Point(3, 124);
+            playerButton1.Name = "playerButton1";
+            playerButton1.Size = new Size(195, 42);
+            playerButton1.TabIndex = 20;
+            playerButton1.Text = "Geef Huidige Kaart";
+            playerButton1.UseVisualStyleBackColor = true;
+            playerButton1.Click += playerButton1_Click_2;
+            // 
+            // playerButton2
+            // 
+            playerButton2.Anchor = AnchorStyles.None;
+            playerButton2.Location = new Point(204, 124);
+            playerButton2.Name = "playerButton2";
+            playerButton2.Size = new Size(195, 42);
+            playerButton2.TabIndex = 21;
+            playerButton2.Text = "Geef Huidige Kaart";
+            playerButton2.UseVisualStyleBackColor = true;
+            playerButton2.Click += playerButton2_Click_1;
+            // 
+            // playerButton3
+            // 
+            playerButton3.Anchor = AnchorStyles.None;
+            playerButton3.Location = new Point(405, 124);
+            playerButton3.Name = "playerButton3";
+            playerButton3.Size = new Size(195, 42);
+            playerButton3.TabIndex = 22;
+            playerButton3.Text = "Geef Huidige Kaart";
+            playerButton3.UseVisualStyleBackColor = true;
+            playerButton3.Click += playerButton3_Click_1;
+            // 
+            // listBoxPlayerDetails
+            // 
+            listBoxPlayerDetails.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            listBoxPlayerDetails.FormattingEnabled = true;
+            listBoxPlayerDetails.Location = new Point(60, 154);
+            listBoxPlayerDetails.Name = "listBoxPlayerDetails";
+            listBoxPlayerDetails.Size = new Size(670, 144);
+            listBoxPlayerDetails.TabIndex = 19;
             // 
             // Form1
             // 
@@ -239,6 +307,7 @@
             BackColor = Color.ForestGreen;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(listBoxPlayerDetails);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(buttonSelectPlayers);
             Controls.Add(trackBar1);
@@ -275,5 +344,10 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private TableLayoutPanel tableLayoutPanel1;
+        private ListBox listBoxPlayerDetails;
+        private Button playerButton1;
+        private Button playerButton2;
+        private Button playerButton3;
+        private Button playerButton4;
     }
 }
